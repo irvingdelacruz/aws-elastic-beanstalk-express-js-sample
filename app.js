@@ -1,10 +1,40 @@
-const express = require('express');
+// index.js
+
+/**
+ * Required External Modules
+ */
+
+const express = require("express");
+const path = require("path");
+
+/**
+ * App Variables
+ */
+
 const app = express();
-const port = 8080;
+const port = process.env.PORT || "8080";
+
+/**
+ *  App Configuration
+ */
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+
+/**
+ * Routes Definitions
+ */
 
 app.get("/", (req, res) => {
-    res.send("Welcome");
+    res.render("index", { title: "Home" });
 });
 
-app.listen(port);
-console.log(`App running on http://localhost:${port}`);
+
+/**
+ * Server Activation
+ */
+
+app.listen(port, () => {
+    console.log(`Listening to requests on http://localhost:${port}`);
+});
+
