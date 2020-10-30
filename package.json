@@ -8,14 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aws-samples/aws-elastic-beanstalk-express-js-sample.git"
+    "url": "git+https://github.com/irvingdelacruz/aws-elastic-beanstalk-express-js-sample.git"
   },
   "license": "MIT-0",
   "dependencies": {
     "express": "^4.17.1",
     "pug": "^3.0.0"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.13"
   }
 }
+gr
